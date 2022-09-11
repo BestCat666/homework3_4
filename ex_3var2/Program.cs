@@ -17,7 +17,7 @@ void PrintArray(int[] col)
     Console.Write("[");
     for (int i = 0; i < col.Length; i++)
 {
-   Console.Write($"{array[i]}, ");
+   Console.Write($"{(i == 0 ? col[i] : "," + col[i])}");
 }
 Console.WriteLine("]");
 Console.WriteLine();
