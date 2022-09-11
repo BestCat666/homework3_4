@@ -6,29 +6,27 @@ void FillArray(int[] collection)
  int length = collection.Length;
  int index = 0;
  while (index < length)
-
- {
-    collection[index] = new Random().Next(0, 1000);
+{
+    collection[index] = new Random().Next(0, 1000); // выбрала такой диапазон значений
     index++;
- }
+}
+Console.WriteLine();
 }
 
 void PrintArray(int[] col)
 {
     int count = col.Length;
     int position = 0;
-    Console.Write("[ ");
+    Console.Write("[");
     while (position < count)
 {
-    Console.Write($"{col[position]}, ");
+    Console.Write($"{(position == 0 ? col[position] : "," + col[position])}");
     position++;
 }
-Console.Write("]");
+Console.WriteLine("]");
 Console.WriteLine();
-
 }
 
 int [] array = new int [8]; // new int[число]; создать массив с определённым кол-ом чисел.изначально будет заполнен нулями
-
 FillArray(array);
 PrintArray(array);
