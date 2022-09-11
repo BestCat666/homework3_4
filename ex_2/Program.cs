@@ -11,7 +11,9 @@ int GetSumDigit(int number)
     while(number>0)
     {
         sum = sum + number % 10;
+        Console.WriteLine(sum); // вывод для себя
         number = number/10;
+        Console.WriteLine(number); // вывод для себя
     }
     return sum;
 }
